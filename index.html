@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>Welcome</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Albert Hovhannisyan">
+        <meta name="description" content="Albert's web site">
+        <meta name="keyword" content="web,development,website">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Patua+One" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="animate.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="icon.png" sizes="48x48">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#home" onclick="slowScroll('#heading')">Home</a></li>
+                    <li><a href="#about" onclick="slowScroll('#about')">About</a></li>
+                    <li><a href="#skils" onclick="slowScroll('#skil')">Skils</a></li>
+                    <li><a href="#contact" onclick="slowScroll('#contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="heading">
+                <article id="home">
+                    <img src="photo.jpg" alt="Albert Hovhannisyan" title="Albert Hovhannisyan" id="myImg">
+                    <div class="picInfo">
+                        <h1>Albert Hovhannisyan</h1>
+                        <ul>
+                            <li><h3>Full Stack Web Developer</h3></li>
+                            <li><h3>Blogger, teacher</h3></li>
+                            <li><h3>Birth date: 14.09.2002</h3></li>
+                            <li><h3>Education:SEUA High School</h3></li>
+                        </ul>
+                    </div>
+                </article>
+                <h1 class="typing">
+                        <a href="javascript:void(0)" class="typewrite" data-period="2000" data-type='[ "Hi, Im Albert.How are you?", "I Love JavaScript.", "I Love to Develop.","See more information about me below " ]'>
+                          <span class="wrap"></span>
+                        </a>
+                    </h1>
+            </section>
+            
+            
+            <section id="about">
+                <article id="innerAbout">
+                    <h2>About me</h2>
+                    <p>Hello dear friend.I'm Albert Hovhannisyan , i engaged in programming for two years,i love Javascript and it's technologies,i am allways trying to learn something new.</p>
+                </article>
+            </section>
+
+            <section id="skil">
+                <h1>My skills</h1>
+                <article id="skils">
+                    <ul>
+                        <li class="skil">HTML/HTML5</li>
+                        <li class="skil">CSS/CSS3</li>
+                        <li class="skil">Less/Sass</li>
+                        <li class="skil">Bootstrap</li>
+                        <li class="skil">JavaScript</li>
+                        <li class="skil">jQuery</li>
+                        <li class="skil">React.js</li>
+                        <li class="skil">Angular 2+</li>
+                        <li class="skil">Vue.js</li>
+                        <li class="skil">Node.js</li>
+                        <li class="skil">MySql,MongoDB</li>
+                        <li class="skil">Redis</li>
+                        <li class="skil">Git,Github</li>
+                        <li class="skil">Webpack,babel</li>
+                    </ul>
+                </article>
+            </section>
+
+            <footer>
+                <article id="contact">
+                    <h2>Keep calm and contact with me `</h2>
+                    <ol>
+                            <li>Phone ` (+374)-43-45-03-15 </li>
+                            <li>Email ` albert.hovhannisyan002@gmail.com</li>
+                    </ol>
+                    <h2>Also find me in social sites `</h2>
+                    <ul>
+                        <li><a href="https://www.facebook.com/abo.hovhannisyan.980" class="fa fa-facebook"></a></li>
+                        <li><a href="https://www.instagram.com/albert_hovhannisyan_/" class="fa fa-instagram"></a></li>
+                        <li><a href=" " class="fa fa-github"></a></li>
+                        <li><a href=" " class="fa fa-linkedin"></a></li>
+                        <li><a href=" " class="fa fa-youtube"></a></li>
+                        <li><a href="https://twitter.com/AlbertHovhann12" class="fa fa-twitter"></a></li>
+                    </ul>
+                    <div class="below">
+                        <span class="year">&copy;All rights are reserved <span id="year"></span></span>
+                        <span class="love">Made with <i class="fa fa-heart pulse"></i> by Albert</span>
+                    </div>
+                </article>
+            </footer>
+        </main>
+        <script>
+            function slowScroll(id){
+                $("html,body").animate({
+                    scrollTop: $(id).offset().top - 60
+                },1000);
+            }
+            $(document).on("scroll",function(){
+                if($(window).scrollTop() !== 0 ){
+                    $("nav").attr("class","fixed")
+                }else{
+                    $("nav").removeClass("fixed")
+                }
+            })
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>
